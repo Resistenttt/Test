@@ -1,25 +1,29 @@
+/* Подключение шрифта Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', -apple-system, sans-serif;
+}
 /* Базовые стили */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-.app {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: #FFFFFF;
+body {
+  background: #1C1C23;
   color: white;
-  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.content {
+.app-container {
   position: relative;
-  width: 100%;
-  padding: 20px;
-  padding-bottom: 80px;
+  width: 402px;
+  min-height: 100vh;
+  padding: 10px;
   background: #1C1C23;
 }
 
@@ -28,92 +32,111 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  padding-top: 51px;
 }
 
-.header-text {
+.settings-text {
   color: #A2A2B5;
   font-size: 16px;
+  line-height: 24px;
   margin-bottom: 18px;
 }
 
 .avatar {
   width: 107px;
   height: 114px;
+  border-radius: 50%;
   margin-bottom: 15px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .username {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 13px;
+  margin-bottom: 30px;
 }
 
-/* Блок настроек */
-.settings-block {
-  position: relative;
-  width: 100%;
+/* Основное меню */
+.main-menu {
+  width: 328px;
+  margin: 0 auto 30px;
   background: rgba(78, 78, 97, 0.2);
+  backdrop-filter: blur(5px);
   border-radius: 16px;
   padding: 16px 20px;
-  margin-bottom: 21px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.settings-item {
+.menu-item {
   display: flex;
   align-items: center;
-  padding: 10px 0;
-  margin-bottom: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.settings-item:last-child {
-  margin-bottom: 0;
+.menu-item:last-child {
+  border-bottom: none;
 }
 
-.icon {
-  width: 25px;
-  height: 25px;
+.menu-icon {
+  width: 24px;
+  height: 20px;
   margin-right: 15px;
 }
 
-.arrow {
+.arrow-icon {
   width: 12px;
   height: 12px;
   margin-left: auto;
 }
 
-/* Сетка предметов (точные параметры из Figma) */
-.items-container {
-  position: relative;
+/* Секции */
+.section {
   width: 328px;
-  margin-left: 0px;
-  margin-bottom: 20px;
+  margin: 0 auto 25px;
 }
 
 .section-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 21px;
+  margin-bottom: 15px;
 }
 
+/* Сетка предметов */
 .items-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  justify-content: center;
 }
 
-.item-card {
+.item-card, .single-item {
   background: rgba(78, 78, 97, 0.07);
+  backdrop-filter: blur(5px);
   border-radius: 16px;
   padding: 15px;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.single-item-card {
+  width: 164px; /* Такая же ширина */
+  height: 167px; /* Такая же высота */
+  background: rgba(78, 78, 97, 0.07);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  padding: 11px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px; /* Отступ между секциями */
 }
 
 .item-image {
-  width: 100%;
+  width: 129px;
   height: 93px;
   object-fit: contain;
   margin-bottom: 10px;
@@ -127,8 +150,9 @@
 
 .item-name {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .item-price {
@@ -136,28 +160,29 @@
   font-weight: bold;
 }
 
-/* Нижнее меню (точные параметры из Figma) */
+/* Нижнее меню */
 .bottom-nav {
   position: fixed;
+  bottom: 9px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 329px;
   height: 55px;
-  left: calc(50% - 164.5px);
-  bottom: 9px;
-  background: #1C1C23;
+  background: rgb(32 32 40 / 48%);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
-  border-radius: 12px;
-  z-index: 11;
-  overflow-y: scroll;
+  z-index: 100;
 }
 
 .nav-btn {
-  color: #A2A2B5;
   background: none;
   border: none;
+  color: #A2A2B5;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   padding: 5px 10px;
 }
 
@@ -166,14 +191,16 @@
 }
 
 /* Адаптивность */
-@media (max-width: 400px) {
-  .items-container {
-    width: calc(100% - 40px);
-    margin-left: 20px;
+@media (max-width: 420px) {
+  .app-container {
+    width: 100%;
   }
+/* Контейнер для одинарных карточек */
+.single-item-container {
+  display: flex;
+  justify-content: flex-start; /* Выравнивание по левому краю */
+  width: 100%;
+}  
   
-  .bottom-nav {
-    width: calc(100% - 40px);
-    left: 20px;
-  }
+  
 }
