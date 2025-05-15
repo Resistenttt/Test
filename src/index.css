@@ -12,12 +12,24 @@
 }
 
 body {
-  background: #1C1C23;
+ height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent; /* важно! */
+  overflow-x: hidden;
+  position: relative;
   color: white;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #1C1C23; /* твой цвет фона, можешь заменить на свой */
+  z-index: -1;
+  pointer-events: none;
 }
 
 .app-container {
@@ -25,7 +37,8 @@ body {
   width: 402px;
   min-height: 100vh;
   padding: 10px;
-  background: #1C1C23;
+  background: transparent;
+  padding-bottom: 70px;
 }
 
 /* Шапка */
