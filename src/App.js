@@ -19,17 +19,17 @@ function App() {
       <div className="main-menu">
         <div className="menu-item">
           <img src="Shape.svg" className="menu-icon" alt="Трейд" />
-          <span>Ссылка на трейд обмен</span>
+          <span className="menu-text menu-underline">Ссылка на трейд обмен</span>
           <img src="arrow.svg" className="arrow-icon" alt=">" />
         </div>
         <div className="menu-item">
           <img src="Vec.svg" className="menu-icon" alt="Язык" />
-          <span>Язык</span>
+          <span className="menu-text menu-underlinee">Язык</span>
           <img src="arrow.svg" className="arrow-icon" alt=">" />
         </div>
         <div className="menu-item">
           <img src="Soob.svg" className="menu-icon" alt="Сообщество" />
-          <span>Сообщество</span>
+          <span className="menu-text menu-underlineee">Сообщество</span>
           <img src="arrow.svg" className="arrow-icon" alt=">" />
         </div>
       </div>
