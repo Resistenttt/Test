@@ -73,7 +73,6 @@ body::before {
 
 /* Основное меню */
 .main-menu {
-  width: 328px;
   background: rgba(78, 78, 97, 0.2);
   border-radius: 16px;
   padding: 16px 20px;
