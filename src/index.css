@@ -111,7 +111,7 @@ body::before {
   position: absolute;
   left: 0;
   bottom: -20px; /* чуть ниже текста */
-  width: 123%;  /* по ширине текста */
+  width: 160%;  /* по ширине текста */
   height: 1px;
   background: rgb(255 255 255 / 6%); /* еле заметная белая */
   border-radius: 1px;
@@ -122,7 +122,7 @@ body::before {
   position: absolute;
   left: 0;
   bottom: -20px; /* чуть ниже текста */
-  width: 580%;  /* по ширине текста */
+  width: 750%;  /* по ширине текста */
   height: 1px;
   background: rgb(255 255 255 / 6%); /* еле заметная белая */
   border-radius: 1px;
