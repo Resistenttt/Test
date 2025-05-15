@@ -13,16 +13,18 @@
 }
 
 body {
-  background-color: #1C1C23; /* Основной цвет фона */
-  margin: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
+  background: #1C1C23;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .app-container {
-  background-color: #1C1C23; /* Дублируем цвет фона */
-  min-height: 100vh;
   position: relative;
+  width: 402px;
+  min-height: 100vh;
+  padding: 10px;
+  background: #1C1C23;
 }
 
 /* Шапка */
@@ -161,7 +163,7 @@ body {
 /* Нижнее меню */
 .bottom-nav {
   position: fixed;
-  bottom: 9px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   width: 329px;
