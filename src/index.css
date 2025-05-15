@@ -6,7 +6,6 @@
 }
 /* Базовые стили */
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
@@ -17,6 +16,8 @@ body {
   color: white;
   display: flex;
   justify-content: center;
+  height: 100%;
+  
 }
 
 .app-container {
@@ -59,19 +60,59 @@ body {
 /* Основное меню */
 .main-menu {
   width: 328px;
-  margin: 0 auto 30px;
   background: rgba(78, 78, 97, 0.2);
-  backdrop-filter: blur(5px);
   border-radius: 16px;
   padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-underline {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+.menu-underlinee {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+.menu-underlineee {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.menu-underline::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -20px; /* чуть ниже текста */
+  width: 123%;  /* по ширине текста */
+  height: 1px;
+  background: rgb(255 255 255 / 6%); /* еле заметная белая */
+  border-radius: 1px;
+}
+.menu-underlinee::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -20px; /* чуть ниже текста */
+  width: 580%;  /* по ширине текста */
+  height: 1px;
+  background: rgb(255 255 255 / 6%); /* еле заметная белая */
+  border-radius: 1px;
 }
 
 .menu-item:last-child {
@@ -159,6 +200,7 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+
 
 /* Нижнее меню */
 .bottom-nav {
