@@ -12,7 +12,8 @@
 }
 
 body {
- height: 100%;
+  overscroll-behavior: none;
+  height: 100%;
   margin: 0;
   padding: 0;
   background: transparent; /* важно! */
